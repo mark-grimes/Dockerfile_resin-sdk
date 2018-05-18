@@ -30,7 +30,7 @@ The .sh script in the repository was built using the Resin OS image creation sys
 https://resinos.io/docs/custombuild/) using commands similar to below.
 
 ```
-docker run --rm -it -v yocto:/build -v --privileged yocto-build-env
+docker run --rm -it -v yocto:/build --privileged yocto-build-env
 
 docker daemon 2> /dev/null &
 chown -R builder:builder /build/
