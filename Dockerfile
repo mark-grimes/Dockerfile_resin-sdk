@@ -10,8 +10,8 @@ RUN curl -fsSL get.docker.com -o get-docker.sh \
     && CHANNEL="stable" ./get-docker.sh \
     && rm ./get-docker.sh
 
-ADD resin-os-glibc-x86_64-resin-image-arm1176jzfshf-vfp-toolchain-2.4.1.sh /install.sh
-RUN chmod u+x /install.sh \
+RUN curl -L https://github.com/mark-grimes/Dockerfile_resin-sdk/releases/download/v0.0.1-alpha/resin-os-glibc-x86_64-resin-image-arm1176jzfshf-vfp-toolchain-2.4.1.sh -o install.sh \
+    && chmod u+x /install.sh \
     && /install.sh \
     && rm /install.sh
 
